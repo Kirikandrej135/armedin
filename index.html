@@ -168,6 +168,30 @@
   /* Sections generic */
   section{padding:88px 0;}
   .section-head{max-width:640px;margin-bottom:52px;}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+  .section-head.center .eyebrow::before{display:none;}
+
+  /* Team */
+  .team-groups{display:flex;flex-direction:column;gap:44px;max-width:520px;margin:0 auto;}
+  .team-group{text-align:center;}
+  .team-group h3{
+    font-family:'Inter',sans-serif;
+    font-size:0.8rem;font-weight:700;
+    letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--brass);margin:0 0 20px;
+  }
+  .team-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;}
+  .team-list li{
+    font-family:'Literata',serif;
+    font-size:1.35rem;font-weight:500;
+    color:var(--pine-deep);
+  }
+  .team-note{
+    font-family:'Inter',sans-serif;
+    font-size:0.78rem;font-weight:500;
+    color:var(--ink-soft);
+    margin-left:6px;
+  }
   .section-head p{color:var(--ink-soft);font-size:1.05rem;}
   .alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
 
@@ -412,6 +436,7 @@
     <nav><ul>
       <li><a href="#pakalpojumi" data-i18n="nav_services">Pakalpojumi</a></li>
       <li><a href="#par-mums" data-i18n="nav_about">Par mums</a></li>
+      <li><a href="#meistari" data-i18n="nav_team">Meistari</a></li>
       <li><a href="#atsauksmes" data-i18n="nav_reviews">Atsauksmes</a></li>
       <li><a href="#faq" data-i18n="nav_faq">Jautājumi</a></li>
       <li><a href="#kontakti" data-i18n="nav_contact">Kontakti</a></li>
@@ -529,6 +554,25 @@
         <div class="about-stats">
           <div class="stat"><span class="num">2007</span><span class="label" data-i18n="about_stat1_label">Gads, kopš kura strādājam Rēzeknē</span></div>
           <div class="stat"><span class="num">4</span><span class="label" data-i18n="about_stat2_label">Aprūpes jomas vienuviet</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="meistari">
+    <div class="wrap">
+      <div class="section-head center" data-reveal>
+        <div class="eyebrow" data-i18n="team_eyebrow">Komanda</div>
+        <h2 data-i18n="team_h2">Meistari</h2>
+      </div>
+      <div class="team-groups" data-reveal>
+        <div class="team-group">
+          <h3 data-i18n="team_podologists_label">Podologi</h3>
+          <ul class="team-list">
+            <li>Inga Gorņeva <span class="team-note">(ex. Kairiša)</span></li>
+            <li>Elvīra Isjanova</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -670,7 +714,7 @@
   /* ---------- Language switcher ---------- */
   const translations = {
     lv: {
-      nav_services: "Pakalpojumi", nav_about: "Par mums", nav_reviews: "Atsauksmes",
+      nav_services: "Pakalpojumi", nav_about: "Par mums", nav_team: "Meistari", nav_reviews: "Atsauksmes",
       nav_faq: "Jautājumi", nav_contact: "Kontakti",
       nav_toggle_aria: "Izvēlne",
       nav_cta_book: "Pieteikties",
@@ -698,6 +742,9 @@
       about_p: "Armedin, SIA darbojas Rēzeknē kopš 2007. gada, palīdzot cilvēkiem atgūt vieglumu ikvienā solī. Mēs apvienojam podoloģisko aprūpi, ortopēdiskos risinājumus un fizioterapiju vienuviet, lai risinātu ne tikai simptomus, bet arī to cēloņus — ar individuālu pieeju katram klientam.",
       about_stat1_label: "Gads, kopš kura strādājam Rēzeknē",
       about_stat2_label: "Aprūpes jomas vienuviet",
+      team_eyebrow: "Komanda",
+      team_h2: "Meistari",
+      team_podologists_label: "Podologi",
       reviews_eyebrow: "Atsauksmes",
       reviews_h2: "Ko saka mūsu klienti",
       review1_text: "Uzmanīga attieksme un redzams rezultāts jau pēc pirmās reizes. Ieteikšu draugiem.",
@@ -728,7 +775,7 @@
       footer_text: "© 2026 Armedin, SIA. Visas tiesības aizsargātas."
     },
     ru: {
-      nav_services: "Услуги", nav_about: "О нас", nav_reviews: "Отзывы",
+      nav_services: "Услуги", nav_about: "О нас", nav_team: "Мастера", nav_reviews: "Отзывы",
       nav_faq: "Вопросы", nav_contact: "Контакты",
       nav_toggle_aria: "Меню",
       nav_cta_book: "Записаться",
@@ -756,6 +803,9 @@
       about_p: "Armedin, SIA работает в Резекне с 2007 года, помогая людям снова чувствовать лёгкость в каждом шаге. Мы объединяем подологический уход, ортопедические решения и физиотерапию в одном месте, чтобы устранять не только симптомы, но и их причины — с индивидуальным подходом к каждому клиенту.",
       about_stat1_label: "Год, с которого мы работаем в Резекне",
       about_stat2_label: "Направления ухода в одном месте",
+      team_eyebrow: "Команда",
+      team_h2: "Мастера",
+      team_podologists_label: "Подологи",
       reviews_eyebrow: "Отзывы",
       reviews_h2: "Что говорят наши клиенты",
       review1_text: "Внимательное отношение и заметный результат уже после первого раза. Порекомендую друзьям.",
@@ -786,7 +836,7 @@
       footer_text: "© 2026 Armedin, SIA. Все права защищены."
     },
     en: {
-      nav_services: "Services", nav_about: "About", nav_reviews: "Reviews",
+      nav_services: "Services", nav_about: "About", nav_team: "Team", nav_reviews: "Reviews",
       nav_faq: "FAQ", nav_contact: "Contact",
       nav_toggle_aria: "Menu",
       nav_cta_book: "Book now",
@@ -814,6 +864,9 @@
       about_p: "Armedin, SIA has been operating in Rēzekne since 2007, helping people regain lightness in every step. We bring together podiatric care, orthopaedic solutions and physiotherapy in one place to address not just symptoms but their causes — with an individual approach for every client.",
       about_stat1_label: "Year we started working in Rēzekne",
       about_stat2_label: "Areas of care in one place",
+      team_eyebrow: "Team",
+      team_h2: "Our Specialists",
+      team_podologists_label: "Podiatrists",
       reviews_eyebrow: "Reviews",
       reviews_h2: "What our clients say",
       review1_text: "Attentive care and a visible result after just the first visit. I'll recommend it to friends.",
